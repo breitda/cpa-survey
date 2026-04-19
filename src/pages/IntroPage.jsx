@@ -9,7 +9,7 @@ export default function IntroPage({ onNext, onBack }) {
     {
       icon: "◈",
       title: "Was ist CPA?",
-      text: "Cognitive Process Automation beschreibt die Automatisierung von Prozessen durch die Kombination klassischer Prozessautomatisierung mit KI-basierten Fähigkeiten. Dadurch können auch komplexere oder weniger strukturierte Aufgaben unterstützt werden.",
+      text: "Cognitive Process Automation beschreibt die Automatisierung von Prozessen durch die Kombination von Robotic Proceess Automation (RPA) mit KI-basierten Fähigkeiten. Dadurch können auch komplexere oder weniger strukturierte Aufgaben unterstützt werden.",
     },
     {
       icon: "◎",
