@@ -22,8 +22,8 @@ export default function ComparisonPage({
   const { pair } = step;
   const isDimension = step.type === "comparison_dimension";
   const question = isDimension
-    ? "Welche Dimension ist wichtiger?"
-    : "Welches Kriterium ist wichtiger?";
+    ? "Welche Dimension hat eine höhere Bedeutung für die Ermittlung der Prozesseignung für CPA?"
+    : "Welches Kriterium hat eine höhere Bedeutung für die Ermittlung der Prozesseignung für CPA?";
   const contextLabel = isDimension ? null : step.dimensionName;
 
   const handleSelect = (id) => {
