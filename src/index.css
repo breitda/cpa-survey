@@ -784,3 +784,201 @@ body {
     padding: 10px 16px;
   }
 }
+
+/* ============================================================
+   NEUE STILE – Verbesserungen v2
+   ============================================================ */
+
+/* --- Ablauf der Befragung (IntroPage) --- */
+.survey-flow-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+  margin-bottom: 32px;
+}
+
+.survey-flow-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.survey-flow-intro {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+  line-height: 1.55;
+}
+
+.survey-flow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.survey-flow-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.survey-flow-step-number {
+  width: 24px;
+  height: 24px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.survey-flow-step-content {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+.survey-flow-step-content strong {
+  font-weight: 600;
+  color: var(--color-text);
+  display: block;
+  margin-bottom: 3px;
+}
+
+.survey-flow-step-content p {
+  margin: 0;
+}
+
+.survey-flow-dims {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--color-border-light);
+  padding-top: 14px;
+}
+
+.survey-flow-dim {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+}
+
+.survey-flow-dim-id {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  padding: 2px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  min-width: 36px;
+  text-align: center;
+}
+
+.survey-flow-dim-name {
+  font-weight: 500;
+  color: var(--color-text);
+  flex: 1;
+}
+
+.survey-flow-dim-count {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+/* --- Zwischenseiten v2 --- */
+.transition-dim-definition {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin-bottom: 14px;
+  font-style: italic;
+}
+
+.transition-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  text-align: left;
+}
+
+.transition-list-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+}
+
+.transition-list-id {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  padding: 2px 7px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  min-width: 36px;
+  text-align: center;
+}
+
+.transition-list-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.transition-list-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.transition-list-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* --- Paarvergleichskarte v2 – 4-stufige Struktur --- */
+.comparison-card-short {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.comparison-card--selected .comparison-card-short {
+  color: var(--color-selected-text);
+}
+
+/* Definition jetzt noch kleiner und unscheinbarer */
+.comparison-card-definition {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.comparison-card--selected .comparison-card-definition {
+  color: var(--color-text-muted);
+}
