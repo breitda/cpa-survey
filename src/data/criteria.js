@@ -10,6 +10,7 @@ export const DIMENSIONS = [
     number: 1,
     name: "Datenanforderungen",
     shortName: "Datenanforderungen",
+    shortDescription: "Anforderungen an Verfügbarkeit, Qualität und Nutzbarkeit der benötigten Daten.",
     definition:
       "Datenanforderungen umfassen die Erfordernisse eines Anwendungsfalls an die Erfassung, Speicherung und den Zugriff auf Daten hinsichtlich der Eingaben, Ausgaben sowie des Kontextes eines Prozesses oder einer Aufgabe.",
     criteria: [
@@ -56,6 +57,7 @@ export const DIMENSIONS = [
     number: 2,
     name: "Kognitive Anforderungen",
     shortName: "Kognitive Anforderungen",
+    shortDescription: "Anforderungen an Wahrnehmung, Verarbeitung und Bewältigung von Komplexität im Prozess.",
     definition:
       "Kognitive Anforderungen beschreiben die Anforderungen, die ein Prozess oder eine Aufgabe an die Fähigkeiten eines CPA-Systems hinsichtlich Wahrnehmung, Lernen, Schlussfolgern und Interaktion stellt.",
     criteria: [
@@ -108,6 +110,7 @@ export const DIMENSIONS = [
     number: 3,
     name: "Beziehungsanforderungen",
     shortName: "Beziehungsanforderungen",
+    shortDescription: "Anforderungen an Kommunikation, Zusammenarbeit und Interaktion mit beteiligten Personen.",
     definition:
       "Beziehungsanforderungen beziehen sich auf das Ausmaß, in dem ein CPA-System während der Durchführung einer Aufgabe oder eines Prozesses soziale oder professionelle Beziehungen wahrnehmen oder aufbauen muss.",
     criteria: [
@@ -148,6 +151,7 @@ export const DIMENSIONS = [
     number: 4,
     name: "Transparenzanforderungen",
     shortName: "Transparenzanforderungen",
+    shortDescription: "Anforderungen an Nachvollziehbarkeit, Erklärbarkeit und Informationsbereitstellung im Prozess.",
     definition:
       "Transparenzanforderungen beschreiben das Ausmaß, in dem ein CPA-System in der Lage sein muss zu verstehen und zu erklären, was zwischen den Eingaben und Ausgaben eines Prozesses oder einer Aufgabe geschieht.",
     criteria: [
