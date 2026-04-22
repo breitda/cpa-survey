@@ -26,7 +26,10 @@ export default function StartPage({ onNext }) {
           <p className="start-text">
             Ihre Angaben werden vertraulich behandelt und ausschließlich im
             Rahmen dieser Masterarbeit zu wissenschaftlichen Zwecken verwendet.
-            Die Teilnahme erfolgt anonym.
+            Die Teilnahme erfolgt freiwillig und anonym.
+          </p>
+           <p className="start-text">
+           Die geschätzte Dauer der Umfrage beträgt 15 - 20 Minuten.
           </p>
         </div>
         <button className="btn btn-primary btn-large" onClick={onNext}>
