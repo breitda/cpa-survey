@@ -3,7 +3,7 @@ import NavButtons from "../components/NavButtons";
 
 /**
  * Vergleichsseite für einen einzelnen Paarvergleich
- * Zeigt zwei Karten an, von denen eine ausgewählt werden muss
+ * Kartenstruktur: ID → Name → Kurzbeschreibung → Definition (klein)
  */
 export default function ComparisonPage({
   step,
@@ -14,7 +14,6 @@ export default function ComparisonPage({
 }) {
   const [selected, setSelected] = useState(null);
 
-  // Gespeicherte Antwort wiederherstellen
   useEffect(() => {
     setSelected(currentAnswer?.chosen || null);
   }, [step.id, currentAnswer]);
@@ -22,18 +21,14 @@ export default function ComparisonPage({
   const { pair } = step;
   const isDimension = step.type === "comparison_dimension";
   const question = isDimension
-    ? "Welche Dimension hat eine höhere Bedeutung für die Ermittlung der Prozesseignung für CPA?"
-    : "Welches Kriterium hat eine höhere Bedeutung für die Ermittlung der Prozesseignung für CPA?";
+    ? "Welche Dimension ist wichtiger?"
+    : "Welches Kriterium ist wichtiger?";
   const contextLabel = isDimension ? null : step.dimensionName;
 
   const handleSelect = (id) => {
     setSelected(id);
     const pairLabel = `${pair.a.name} vs. ${pair.b.name}`;
     onAnswer(id, pairLabel);
-  };
-
-  const handleNext = () => {
-    if (selected) onNext();
   };
 
   return (
@@ -61,7 +56,7 @@ export default function ComparisonPage({
 
       <NavButtons
         onBack={onBack}
-        onNext={handleNext}
+        onNext={onNext}
         canNext={!!selected}
       />
     </div>
@@ -70,6 +65,7 @@ export default function ComparisonPage({
 
 /**
  * Einzelne Auswahlkarte
+ * Zeigt: ID · Name · Kurzbeschreibung · Definition (klein)
  */
 function ComparisonCard({ item, isSelected, onSelect, isDimension }) {
   return (
@@ -80,14 +76,24 @@ function ComparisonCard({ item, isSelected, onSelect, isDimension }) {
       aria-pressed={isSelected}
     >
       <div className="comparison-card-inner">
+        {/* 1. ID */}
         <div className="comparison-card-id">{item.id}</div>
+
+        {/* 2. Name */}
         <div className="comparison-card-name">{item.name}</div>
+
+        {/* 3. Kurzbeschreibung (nur bei Kriterien und Dimensionen mit shortDescription) */}
+        {item.shortDescription && (
+          <div className="comparison-card-short">{item.shortDescription}</div>
+        )}
+
         <div className="comparison-card-divider" />
+
+        {/* 4. Definition (klein, unscheinbar) */}
         <div className="comparison-card-definition">{item.definition}</div>
+
         {isSelected && (
-          <div className="comparison-card-check" aria-hidden="true">
-            ✓
-          </div>
+          <div className="comparison-card-check" aria-hidden="true">✓</div>
         )}
       </div>
     </button>
